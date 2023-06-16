@@ -281,7 +281,7 @@ if __name__ == '__main__':
     metadata_list_ms = []
     metadata_file_ms = MetadataFileMS()
     metadata_file_zip = []
-    extension = ['.docx', '.xlsx', '.pptx']
+    extension = ['.docx', '.xlsx', '.pptx', '.xlsm']
 
     if not args.file:
         print('Введите путь к файлу: ', end='')
@@ -289,7 +289,7 @@ if __name__ == '__main__':
     else:
         file_name = args.file
     
-    file_name, file_extension = os.path.splitext(file_name)
+    file, file_extension = os.path.splitext(file_name)
     if file_extension not in extension:
         print('Данный тип файлов не поддерживается')
     
