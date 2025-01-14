@@ -285,7 +285,7 @@ if __name__ == '__main__':
 
     if not args.file:
         print('Введите путь к файлу: ', end='')
-        file_name = input()
+        file_name = input().replace('"', '')
     else:
         file_name = args.file
     
